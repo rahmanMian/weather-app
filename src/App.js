@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { useState } from 'react';
 import { type } from '@testing-library/user-event/dist/type';
@@ -26,13 +26,16 @@ function App() {
         {/*HEADER*/}
         <h1>Weather App</h1>
         {/*Search Box*/}
-        <div>
-         <input type="text" 
+        
+      </header>
+      <body className="App-body">
+      <div id="search">
+         <input id="searchInput" type="text" 
                 placeholder="Enter Location..."
                 onChange={(e) => setSearch(e.target.value)}
          />{/*haves setSearch value*/}
           
-          <button onClick={searchPressed}>Search</button>
+          <button id="searchButton" onClick={searchPressed}>Search</button>
           </div>
         
         {/*if weather not undefined*/}
@@ -52,7 +55,9 @@ function App() {
           ) : (
             ""
           )}   
-      </header>
+
+
+      </body>
       
     </div>
   );
